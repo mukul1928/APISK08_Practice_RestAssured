@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-09T18:12:30 IST" name="Default suite" finished-at="2025-10-09T18:12:33 IST" duration-ms="2406">
+    <groups>
+    </groups>
+    <test started-at="2025-10-09T18:12:30 IST" name="Default test" finished-at="2025-10-09T18:12:33 IST" duration-ms="2406">
+      <class name="MyPractice1.UsingDataProvider">
+        <test-method signature="addBook(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:MyPractice1.UsingDataProvider@485966cc]" started-at="2025-10-09T18:12:30 IST" name="addBook" data-provider="booksData" finished-at="2025-10-09T18:12:32 IST" duration-ms="1965" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Selenium Java]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[uhgy]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8765]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:MyPractice1.UsingDataProvider@485966cc]" started-at="2025-10-09T18:12:32 IST" name="addBook" data-provider="booksData" finished-at="2025-10-09T18:12:33 IST" duration-ms="191" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Appium]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jhre]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9122]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:MyPractice1.UsingDataProvider@485966cc]" started-at="2025-10-09T18:12:33 IST" name="addBook" data-provider="booksData" finished-at="2025-10-09T18:12:33 IST" duration-ms="172" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Robot framework]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[gtrf]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[6599]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+      </class> <!-- MyPractice1.UsingDataProvider -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
