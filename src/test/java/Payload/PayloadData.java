@@ -17,4 +17,11 @@ public class PayloadData {
 				+ "\"aisle\":\"" + aisle + "\",\r\n" + "\"author\":\"John foe\"\r\n" + "}";
 		return bookdetails;
 	}
+
+	public static String goRestPayload() {
+		String payload = "{\r\n" + "    \"id\": 8180139,\r\n" + "    \"name\": \"Tenali Ramakrishna\",\r\n"
+				+ "    \"email\": \"tenali.tyhrtfffcd@"+Math.random()+"15ce.com\",\r\n" + "    \"gender\": \"male\",\r\n"
+				+ "    \"status\": \"active\"\r\n" + "}";
+		return payload;
+	}
 }
