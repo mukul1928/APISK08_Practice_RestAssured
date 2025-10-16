@@ -24,4 +24,27 @@ public class PayloadData {
 				+ "    \"status\": \"active\"\r\n" + "}";
 		return payload;
 	}
+	
+	public static String getPayloadData(int id) {
+		String payload = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n"
+				+ "<Pet>\r\n"
+				+ "	<id>0</id>\r\n"
+				+ "	<Category>\r\n"
+				+ "		<id>"+id+"</id>\r\n"
+				+ "		<name>string</name>\r\n"
+				+ "	</Category>\r\n"
+				+ "	<name>doggie</name>\r\n"
+				+ "	<photoUrls>\r\n"
+				+ "		<photoUrl>string</photoUrl>\r\n"
+				+ "	</photoUrls>\r\n"
+				+ "	<tags>\r\n"
+				+ "		<Tag>\r\n"
+				+ "			<id>0</id>\r\n"
+				+ "			<name>string</name>\r\n"
+				+ "		</Tag>\r\n"
+				+ "	</tags>\r\n"
+				+ "	<status>available</status>\r\n"
+				+ "</Pet>";
+		return payload;
+	}
 }
