@@ -1,9 +1,9 @@
 package MyPractice1;
 
 import static io.restassured.RestAssured.*;
+import io.restassured.RestAssured;
 
 import Payload.PayloadData;
-import io.restassured.RestAssured;
 
 public class PostExample1 {
 	public static void main(String[] args) {
