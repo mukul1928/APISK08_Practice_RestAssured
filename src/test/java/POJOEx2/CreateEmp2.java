@@ -1,21 +1,27 @@
-package POJOEx1;
+package POJOEx2;
 
 import static io.restassured.RestAssured.given;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import Payload.PayloadData;
 import io.restassured.RestAssured;
 
-public class CreateEmployee {
-	public static void main(String[] args) throws JsonProcessingException {
-		Employee1POJO emp = new Employee1POJO();
+public class CreateEmp2 {
+	public static void main(String[] args) throws JsonMappingException, JsonProcessingException {
+		EmpAddressPojo x = new EmpAddressPojo();
+		x.setCity("Pune");
+		x.setState("Maharastra");
+		x.setPincode(273001);
+		
+		Employee2pojo emp = new Employee2pojo();
 		emp.setName("Harry");
 		emp.setJob("QA Lead");
 		emp.setMarried(false);
-		emp.setSalary(200000f);
-
+		emp.setEmpAddress(x);
+		emp.setSalary(250000f);
+		
 		ObjectMapper obj = new ObjectMapper();
 		String empJSON = obj.writerWithDefaultPrettyPrinter().writeValueAsString(emp);// We are doing Serialization here
 		RestAssured.baseURI = "https://reqres.in/";
@@ -27,11 +33,12 @@ public class CreateEmployee {
 				.assertThat().statusCode(201).extract().response().asString();
 					System.out.println(Response);
 
-		Employee1POJO empObj = obj.readValue(Response, Employee1POJO.class);// DeSerialization
+					Employee2pojo empObj = obj.readValue(Response, Employee2pojo.class);// DeSerialization
 		String name1 = empObj.getName();
 		String job1 = empObj.getJob();
 		float salary1 = empObj.getSalary();
 		boolean isMarried1 = empObj.isMarried();
-		System.out.println(name1 + " " + job1 + " " + salary1 + " " + isMarried1);
+		EmpAddressPojo address1 = empObj.getEmpAddress();
+		System.out.println(name1 + " " + job1 + " " + salary1 + " " + isMarried1 + " " + address1);
 	}
 }
