@@ -10,7 +10,7 @@ import io.restassured.RestAssured;
 
 public class CreateEmp2 {
 	public static void main(String[] args) throws JsonMappingException, JsonProcessingException {
-		EmpAddressPojo x = new EmpAddressPojo();
+		EmployeeAddressPojo x = new EmployeeAddressPojo();
 		x.setCity("Pune");
 		x.setState("Maharastra");
 		x.setPincode(273001);
@@ -38,7 +38,7 @@ public class CreateEmp2 {
 		String job1 = empObj.getJob();
 		float salary1 = empObj.getSalary();
 		boolean isMarried1 = empObj.isMarried();
-		EmpAddressPojo address1 = empObj.getEmpAddress();
+		EmployeeAddressPojo address1 = empObj.getEmpAddress();
 		System.out.println(name1 + " " + job1 + " " + salary1 + " " + isMarried1 + " " + address1);
 	}
 }

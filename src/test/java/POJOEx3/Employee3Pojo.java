@@ -1,12 +1,26 @@
-package POJOEx2;
+package POJOEx3;
 
-public class Employee2pojo {
+import java.util.List;
+
+public class Employee3Pojo {
 	
 	private String name;
 	private String job;
 	private boolean isMarried;
 	private float salary;
-	private EmployeeAddressPojo empAddress;
+	private EmployeeAddress3Pojo empAddress;
+	private List<String> banks;
+	
+	
+	
+	
+	
+	public List<String> getBanks() {
+		return banks;
+	}
+	public void setBanks(List<String> banks) {
+		this.banks = banks;
+	}
 	public String getName() {
 		return name;
 	}
@@ -31,10 +45,10 @@ public class Employee2pojo {
 	public void setSalary(float salary) {
 		this.salary = salary;
 	}
-	public EmployeeAddressPojo getEmpAddress() {
+	public EmployeeAddress3Pojo getEmpAddress() {
 		return empAddress;
 	}
-	public void setEmpAddress(EmployeeAddressPojo empAddress) {
+	public void setEmpAddress(EmployeeAddress3Pojo empAddress) {
 		this.empAddress = empAddress;
 	}
 	

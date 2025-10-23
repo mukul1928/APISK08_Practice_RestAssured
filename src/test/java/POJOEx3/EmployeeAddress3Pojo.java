@@ -1,6 +1,6 @@
-package POJOEx2;
+package POJOEx3;
 
-public class EmpAddressPojo {
+public class EmployeeAddress3Pojo {
 	private String state;
 	private String city;
 	private int pincode;
