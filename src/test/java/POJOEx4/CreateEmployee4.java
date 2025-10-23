@@ -1,4 +1,4 @@
-package POJOEx3;
+package POJOEx4;
 
 import static io.restassured.RestAssured.given;
 
@@ -10,28 +10,34 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.restassured.RestAssured;
 
-public class CreateEmployee3 {
+public class CreateEmployee4 {
 	public static void main(String[] args) throws JsonProcessingException {
-		EmployeeAddress3Pojo empaddress = new EmployeeAddress3Pojo();
-		empaddress.setCity("Pune");
-		empaddress.setState("Maharastra");
-		empaddress.setPincode(700044);
-		
-		List<String> banks = new ArrayList<String>();
-		banks.add("HDFC");
-		banks.add("ICICI");
-		banks.add("SBI");
-		
-		Employee3Pojo emp = new Employee3Pojo();
+		Employee4Pojo emp = new Employee4Pojo();
 		emp.setName("Harry");
-		emp.setJob("Manager");
+		emp.setJob("QA Lead");
 		emp.setMarried(false);
-		emp.setSalary(95000f);
-		emp.setEmpAddress(empaddress);
-		emp.setBanks(banks);
+		emp.setSalary(200000f);
+		
+		Employee4Pojo emp2 = new Employee4Pojo();
+		emp2.setName("Tom");
+		emp2.setJob("QA Manager");
+		emp2.setMarried(true);
+		emp2.setSalary(300000f);
+		
+		Employee4Pojo emp3 = new Employee4Pojo();
+		emp3.setName("Matt");
+		emp3.setJob("QA Architect");
+		emp3.setMarried(true);
+		emp3.setSalary(500000f);
+		
+		List<Employee4Pojo> li = new ArrayList<Employee4Pojo>();
+		li.add(emp);
+		li.add(emp2);
+		li.add(emp3);
 		
 		ObjectMapper obj = new ObjectMapper();
-		String empJson = obj.writerWithDefaultPrettyPrinter().writeValueAsString(emp);
+		String empJson = obj.writerWithDefaultPrettyPrinter().writeValueAsString(li);
+		
 		RestAssured.baseURI = "https://reqres.in/";
 		String Response = given().log().all().header("content-type", "application/json")
 				.header("x-api-key", "reqres-free-v1")
@@ -40,5 +46,6 @@ public class CreateEmployee3 {
 				.then().log().all()
 				.assertThat().statusCode(201).extract().response().asString();
 					System.out.println(Response);
+
 	}
 }
