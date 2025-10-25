@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: RequestResponseSpecification.MyTest
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.557 s - in RequestResponseSpecification.MyTest
